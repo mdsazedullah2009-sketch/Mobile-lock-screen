@@ -63,6 +63,128 @@ body {
   width: 90dvw;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid hwb(0 100% 0% / 0.027450980392156862);
+}
+
+.key-cloam{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-top: 10px;
+}
+
+.key{
+  
+    /* নিখুঁত গোলাকার করার জন্য সমান সাইজ */
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+
+  /* সংখ্যা মাঝখানে আনার জন্য Flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* টেক্সট ডিজাইন */
+  font-size: 25px;
+  font-weight: bold;
+  color: hwb(204 92% 6%);
+
+  /* হালকা সাদা ট্রান্সপারেন্ট ব্যাকগ্রাউন্ড ও ব্লার */
+  background: rgba(36, 35, 35, 0.8313725490196079);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari সাপোর্টের জন্য */
+
+  /* হালকা বর্ডার (গ্লাস ইফেক্ট সুন্দর দেখানোর জন্য) */
+  border: 1px solid rgba(255, 255, 255, 0.09019607843137255);
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.action{
+  background:hwb(210 88% 4%);
+  color:hwb(0 27% 73% / 0.5725490196078431);
+  border-radius:30%;
+}
+
+.key:active{
+  background:hwb(210 88% 4%);
+  color:hwb(0 27% 73% / 0.5725490196078431);
+  border-radius:30%;
+}
+
+.emergency-btn-cont{
+  margin-top: 30px;
+}
+
+.rma-col-btn{
+  border: none;
+  background:hwb(206 96% 1% / 0.8666666666666667);
+ color:hwb(0 29% 71% / 0.9372549019607843);
+  height: 30px;
+  width: 25dvw;
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 50px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.shwdisplay{
+  display: none;
+  align-items:center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 20px;
+  border: 2px  solid hwb(0 19% 81% / 0.6196078431372549);
+  color: hwb(196 89% 5%);
+}
+.shwdisplay.show{
+  display:flex;
+}
+
+@keyframes fadeup {
+  0%{
+    transform: 0px;
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
+    transform: -2000px;
+    display: none;
+  }
+}  justify-content: end;
+  background:hwb(0 16% 84% / 0.19607843137254902);
+  backdrop-filter: blur(10px);
+  height: 100dvh;
+  width: 100dvw;
+}
+
+.keyboard-container.active{
+  animation: fadeup 0.5ms ease-in-out;
+}
+
+.keyboard-container{
+  display:flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.dot-display{
+  display: flex;
+  font-size: 70px;
+  font-weight: 800;
+  color:hwb(0 91% 9%);
+  padding: 5px 0px;
+  width: 90dvw;
+  align-items: center;
+  justify-content: center;
   border-bottom: 1px solid hwb(0 100% 0% / 0.07450980392156863);
 }
 
